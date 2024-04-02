@@ -1,0 +1,515 @@
+:root {
+    --dark: rgb(0, 33, 26);
+    --high: rgb(255, 176, 65);
+    --light: rgb(255, 255, 255);
+    --yellow1: rgb(243, 239, 230);
+    --yellow2: rgb(246, 225, 198);
+    --green: rgb(0, 129, 83);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--dark);
+
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    height: 90px;
+    width: 100%;
+    background-color: var(--dark);
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+}
+
+nav {
+    width: 50%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    position: relative;
+    padding: 10px 3px;
+    list-style: none;
+    /* background-color:red; */
+}
+
+nav ul li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    height: 4px;
+    width: 0;
+    background-color: var(--high);
+}
+
+.active::before {
+    width: 100%;
+}
+
+ul li:hover::before {
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+ul li a {
+    text-decoration: none;
+    color: var(--light);
+    font-size: 1.06rem;
+    font-weight: 500;
+}
+
+#search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 17%;
+}
+
+#search-box input {
+    height: 40px;
+    width: 13rem;
+    background-color: transparent;
+    border: 1px solid var(--light);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+::placeholder {
+    text-align: center;
+    color: var(--light);
+    font-size: 19px;
+    font-weight: 500;
+}
+
+#search-box #search-icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 13px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: var(--light);
+}
+#search-box #search-icon ion-icon {
+    font-size: 30px;
+}
+
+#cart {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 50px;
+    width: 15%;
+
+}
+
+#cart h3 {
+    color: var(--light);
+
+}
+
+#cart-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    margin-left: 12px;
+    border-radius: 50%;
+    border: 3px solid var(--light);
+    color: var(--light);
+}
+
+#nav-togle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 35px;
+}
+
+#nav-togle:hover span {
+    background-color: var(--high);
+    transition: background-color .3s ease-in-out;
+}
+
+#nav-togle span {
+    height: 5px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: var(--light);
+}
+
+/* //////////////////////////// Nav End ////////////////// */
+
+
+#contaner {
+    display: flex;
+    height: calc(100vh - 90px);
+}
+
+#contaner #left {
+    display: flex;
+    height: 100%;
+    width: 80%;
+}
+
+#left #left-first {
+    height: 100%;
+    width: 45%;
+    padding-left: 30px;
+    background-color: var(--yellow1);
+}
+
+#left-first #logo {
+    height: 30%;
+    width: 100%;
+    background: url("./logo.jpg") 10px no-repeat ;
+    font-size: 50px;
+
+}
+
+#left-first #filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#left-first #filter-togle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+}
+
+#left-first #filter-togle:hover span {
+    background-color: var(--high);
+    transition: background-color .3s ease-in-out;
+}
+
+#filter-togle span {
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: var(--dark);
+}
+
+#left-first #shop {
+    height: 65%;
+    padding-top: 20px;
+}
+
+#left-first #shop h2 {
+    display: inline;
+    position: relative;
+    padding: 6px 0;
+    font-weight: 700;
+}
+
+#left-first #shop h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--dark);
+}
+
+#left-first #shop ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+
+}
+
+#left-first #shop ul li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 10px;
+    width: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 27px;
+    letter-spacing: 2px;
+
+
+}
+
+#left-first #shop ul .txt-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+#left-first #shop ul li ion-icon {
+    height: 30px;
+    width: 30px;
+
+}
+
+#left-first #shop ul li .dot {
+    color: var(--high);
+    height: 15px;
+    width: 15px;
+
+}
+
+
+
+#left #left-second {
+    height: 100%;
+    width: 55%;
+    background-color: var(--yellow2);
+}
+
+#contaner #right {
+    height: 100%;
+    width: 20%;
+    background-color: var(--green);
+}
+
+
+#products{
+    display: flex;
+    position: absolute;
+    z-index: 99;
+    top: 25%;
+    right: 10%;
+    height: 70vh;
+    width: 60%;
+
+}
+
+#products .left{
+    height: 100%;
+    width: 50%;
+}
+
+#products .left #cards{
+    height: 100%;
+    width: 100%;
+}
+
+.left #cards #card-up{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+    height: 50%;
+    width: 100%;
+}
+.left #cards #card-down{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+    height: 50%;
+    width: 100%;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    height: 95%;
+    width: 160px;
+    background-color: var(--light);
+}
+.newset{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: -45px;
+    bottom: 29%;
+    height: 27px;
+    width: 80px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--light);
+    background-color: var(--high);
+}
+.newset2{
+    left: 70%;
+}
+.card .image{
+    height: 85%;
+    width: 100%;
+}
+.card .img1{
+    background: url("./m1.jpg") center no-repeat ;
+    background-size:  cover;
+}
+.card .img2{
+    background: url("./m2.jpg") center no-repeat ;
+    background-size:  cover;
+}
+.card .img3{
+    background: url("./m3.jpg") center no-repeat ;
+    background-size:  cover;
+}
+.card .img4{
+    background: url("./m4.jpg") center no-repeat ;
+    background-size:  cover;
+}
+
+.card .detail{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.card .txt{
+    height: 100%;
+    width: 80%;
+    line-height: 13px;
+}
+.card .icon{
+    height: 100%;
+    width: 20%;
+    font-size: 30px;
+}
+.card .icon ion-icon{
+    color: var(--high);
+}
+.card  p{
+    display: inline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+}
+.card h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+
+#products .right{
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+#sale{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 12%;
+    height: 150px;
+    width:150px ;
+    border-radius: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: italic;
+    background-color: var(--high);
+}
+#shop-now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left:26%;
+    bottom: -7px;
+    height: 40px;
+    width:160px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--light);
+    background-color: var(--high);
+}
+#products .right #sale-card{
+    height: 97%;
+    width: 85%;
+    background-color: var(--light);
+}
+.right #sale-card .sale-image{
+    background: url("./m5.jpg") center no-repeat;
+    background-size: cover;
+    height: 55%;
+    width: 100%;
+}
+#sale-card .detail{
+    height: 45%;
+    width: 100%;
+    padding: 15px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#sale-card .detail h2{
+    font-weight: 900;
+    font-size: 30px;
+    font-style: italic;
+}
+#sale-card .detail p{
+    font-size: 12px;
+}
+
+#sale-card .detail #sale-price h2{
+    font-weight: 800;
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+
+#sale-card .detail #sale-price .pr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 100%;
+}
+#sale-card .detail #sale-price .pr h2{
+    color: var(--high);
+}
+#sale-card .detail #sale-price .si{
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#sale-price .si #sale-size{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sale-price .si #sale-size span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 27px;
+    width: 27px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: var(--dark);
+    color: var(--light);
+
+}

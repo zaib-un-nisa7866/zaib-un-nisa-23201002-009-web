@@ -1,0 +1,202 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <link rel="preload" href="./font/BodoniFLF-BoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="active"> <a href="#">Home</a></li>
+                <li> <a href="#">Catalog</a></li>
+                <li> <a href="#">Gender</a></li>
+                <li> <a href="#">Brands</a></li>
+                <li> <a href="#">News</a></li>
+                <li> <a href="#">About</a></li>
+                <li> <a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="search-box">
+            <input type="text" placeholder="Search">
+            <div id="search-icon"> <ion-icon name="search"></ion-icon></div>
+        </div>
+        <div id="cart">
+            <h3>Cart</h3>
+            <h3 id="cart-count">2</h3>
+        </div>
+        <div id="nav-togle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- ////////////////////// main working start ////////////////////// -->
+    <div id="products">
+        <div class="left">
+            <div id="cards">
+                <div id="card-up">
+                    <div class="card">
+                        <div class="newset">Newset</div>
+                        <div class="image img1"></div>
+                        <div class="detail">
+                            <div class="txt">
+                                <h4>Your text here</h4>
+                                <p>lorem ipsum dolor sit</p>
+                            </div>
+                            <div class="icon">
+                                <ion-icon name="arrow-forward-circle"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image img2"></div>
+                        <div class="detail">
+                            <div class="txt">
+                                <h4>Your text here</h4>
+                                <p>lorem ipsum dolor sit</p>
+                            </div>
+                            <div class="icon">
+                                <ion-icon name="arrow-forward-circle"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card up done  -->
+                <div id="card-down">
+                    <div class="card">
+                        <div class="image img3"></div>
+                        <div class="detail">
+                            <div class="txt">
+                                <h4>Your text here</h4>
+                                <p>lorem ipsum dolor sit</p>
+                            </div>
+                            <div class="icon">
+                                <ion-icon name="arrow-forward-circle"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="newset newset2">Newset</div>
+                        <div class="image img4"></div>
+                        <div class="detail">
+                            <div class="txt">
+                                <h4>Your text here</h4>
+                                <p>lorem ipsum dolor sit</p>
+                            </div>
+                            <div class="icon">
+                                <ion-icon name="arrow-forward-circle"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card down end  -->
+
+            </div>
+            <!-- cards section end  -->
+
+        </div>
+        <!-- left section end  -->
+        <div class="right">
+            <div id="sale-card">
+                <div id="sale">Sale</div>
+                <div id="shop-now">Shop Now</div>
+                <div class="sale-image"></div>
+                <div class="detail">
+                    <h2>Your title</h2>
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit ducimus sapiente sit, quos
+                        quaerat repudiandae laboriosam, mollitia animi repellendus, corrupti consectetur eum beatae sint
+                        ipsam! Ex error eos,</p>
+
+                    <div id="sale-price">
+                        <div class="pr">
+                            <h2>$9,99</h2>
+                            <h2>Size</h2>
+                        </div>
+                        <div class="si">
+                            <h2>$4,99</h2>
+                            <div id="sale-size">
+                                <span>S</span>
+                                <span>M</span>
+                                <span>L</span>
+                                <span>XL</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- sale price end  -->
+                </div>
+            </div>
+            <!-- sale card end  -->
+        </div>
+        <!-- right end  -->
+    </div>
+    <!-- produc contaner end  -->
+
+    <!-- ////////////////////// main working start ////////////////////// -->
+    <div id="contaner">
+        <div id="left">
+            <div id="left-first">
+                <div id="logo"></div>
+                <div id="filter">
+                    <h2>Filters</h2>
+                    <div id="filter-togle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div id="shop">
+                    <h2>Shop By</h2>
+                    <ul>
+                        <li> <ion-icon class="dot" name="ellipse"></ion-icon>
+                            <div class="txt-icon"> Gender <ion-icon name="chevron-down-circle-outline"></ion-icon>
+                            </div>
+                        </li>
+                        <li> <ion-icon class="dot" name="ellipse"></ion-icon>
+                            <div class="txt-icon"> Brands <ion-icon name="chevron-down-circle-outline"></ion-icon>
+                            </div>
+                        </li>
+                        <li> <ion-icon class="dot" name="ellipse"></ion-icon>
+                            <div class="txt-icon"> Style <ion-icon name="chevron-down-circle-outline"></ion-icon> </div>
+                        </li>
+                        <li> <ion-icon class="dot" name="ellipse"></ion-icon>
+                            <div class="txt-icon"> price <ion-icon name="chevron-down-circle-outline"></ion-icon> </div>
+                        </li>
+                        <li> <ion-icon class="dot" name="ellipse"></ion-icon>
+                            <div class="txt-icon"> Season <ion-icon name="chevron-down-circle-outline"></ion-icon>
+                            </div>
+                        </li>
+                        <li> <ion-icon class="dot" name="ellipse"></ion-icon>
+                            <div class="txt-icon"> Sales <ion-icon name="chevron-down-circle-outline"></ion-icon> </div>
+                        </li>
+                    </ul>
+                    <div class="cat">
+                    </div>
+                </div>
+            </div>
+
+            <div id="left-second"></div>
+        </div>
+        <!-- ///////////////////// left end //////////// -->
+        <div id="right"></div>
+
+    </div>
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
